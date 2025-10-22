@@ -28,7 +28,7 @@ Um sistema web simples e elegante para gerar legendas automáticas em vídeos `.
 Clone este repositório e acesse a pasta do projeto:
 
 
-git clone https://github.com/seuusuario/seuprojeto.git
+git clone https://github.com/vkzs6/Whisper_subtitles.git
 cd seuprojeto
 
 text
@@ -72,25 +72,6 @@ Certifique-se de que o ffmpeg está instalado e disponível no path (você pode 
 4. Aguarde o processamento. Você poderá:
     - Assistir o vídeo legendado direto no browser.
     - Baixar o arquivo legendado.
-
----
-
-## 📁 Estrutura do Projeto
-
-/
-├── app.py
-├── static/
-│ └── style.css
-├── templates/
-│ ├── index.html
-│ └── player.html
-├── uploads/
-│ └── (vídeos enviados)
-├── outputs/
-│ └── (vídeos legendados)
-└── README.md
-
-text
 
 ---
 
