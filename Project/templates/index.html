@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legendador Automático</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 Legendador Automático</h1>
+    <p>Envie seu vídeo em inglês e receba de volta com legendas automáticas.</p>
+
+    <form action="/" method="post" enctype="multipart/form-data" id="uploadForm">
+      <div class="file-input">
+        <input type="file" name="file" id="file" accept=".mp4" required>
+        <label for="file">📁 Escolher vídeo (.mp4)</label>
+      </div>
+
+      <button type="submit">Gerar Legendas</button>
+    </form>
+
+    <div id="status" class="hidden">
+      <div class="loader"></div>
+      <p>⏳ Processando vídeo... Aguarde alguns minutos.</p>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('uploadForm');
+    const statusBox = document.getElementById('status');
+
+    form.addEventListener('submit', () => {
+      form.classList.add('hidden');
+      statusBox.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

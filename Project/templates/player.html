@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vídeo Legendado</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>✅ Seu vídeo está pronto!</h1>
+    <video controls class="video-player">
+      <source src="{{ url_for('serve_file', filename=filename) }}" type="video/mp4">
+      Seu navegador não suporta a reprodução de vídeos.
+    </video>
+    <div class="actions">
+      <a href="{{ url_for('download_file', filename=filename) }}" class="btn">⬇️ Baixar vídeo</a>
+      <a href="/" class="btn-alt">↩️ Enviar outro</a>
+    </div>
+  </div>
+</body>
+</html>
